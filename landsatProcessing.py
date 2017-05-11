@@ -132,12 +132,12 @@ r.composite(blue="LE07_L1TP_165061_20170113_20170215_01_T1_B2", green="LE07_L1TP
 
 
 # Grouping raster layers into a group and subgroup as required in clustering and classification
-grass.run_command("i.group", group="lamu", subgroup="lamusubgrp", input="*")
+grass.run_command("i.group", group="coastgrp", subgroup="mysubgrp", input="*")
 # generating spectral signatures to be used in maximum likelihood classification
 
-grass.run_command("i.cluster", group="lamu", subgroup="lamusubgrp", signaturefile="sig_cluster_lsat2017", classes="19")
+grass.run_command("i.cluster", group="coastgrp", subgroup="mysubgrp", signaturefile="sig_cluster_lsat2017", classes="19")
 # performing unspervised image classification employing maximum likelihood algorithm
-grass.run_command("i.maxlik", group="lamu", subgroup="lamusubgrp", signaturefile="sig_cluster_lsat2017",
+grass.run_command("i.maxlik", group="coastgrp", subgroup="mysubgrp", signaturefile="sig_cluster_lsat2017",
                   output="unsupervised_result")
 # Listing the imported raster files
 grass.run_command("g.list", flags="f", type="rast")
