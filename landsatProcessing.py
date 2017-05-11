@@ -86,13 +86,6 @@ def fn(path):
     for top, dirs, files in os.walk(path):
         return [os.path.join(top, dir) for dir in dirs]
 
-# START PROCESS
-# PART 0: PRE-PROCESSING STUFF ###
-# import DEM for atmospheric correction
-# r.in.gdal(input=inDEM,output="dem",overwrite=OVR)
-# r.mapcalc(expression="dem=25",overwrite=OVR)
-# create a visibility map
-# r.mapcalc(expression="vis=18", overwrite=OVR)
 # Find the central location of the Landsat file from metadata
 metadata = []
 fileList = []
