@@ -14,7 +14,7 @@ QIET = True
 # OVERWRITE EXISTING FILES
 OVR = False
 # Setup the path to the Landsat 7 Directories
-rsdatapath = "/home/hempire/rawData/L7Dir"
+rsdatapath = os.path.join(os.path.expanduser("~"), "rawData/L7Dir/")
 # set L7 Metadata wildcards
 wldc_mtl = "*_MTL.txt"
 
